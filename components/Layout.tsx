@@ -2,6 +2,8 @@
 import Head from 'next/head'
 // Next.jsでクライアントサイドのルーティングを実現するため
 import Link from 'next/link'
+// Next.jsで画像を最適化して表示するため
+import Image from 'next/image'
 
 // TypeScriptによる型安全性を満たすために使う
 import { ReactNode } from 'react'
@@ -62,6 +64,20 @@ export default function Layout({ children, title = 'HP by Next.js' }: LayoutProp
             <main className="flex flex-1 justify-center items-center flex-col w-screen">
                 {children}
             </main>
+            {/* w-full: 親要素の幅100％になるようにする */}
+            {/* border-t: 要素の上にボーダーを追加 */}
+            <footer className="w-full h-12 flex justify-center items-center border-t">
+                {/* prettier-ignore */}
+                <a
+                    className="flex items-center"
+                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Powered by{" "}
+                    <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+                </a>
+            </footer>
         </div>
     )
 }
