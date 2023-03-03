@@ -1,13 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
     return (
-        <>
+        // Tailwindcssに関してはチートシート参照
+        // 1rem = 16px
+
+        // min-h-screen: 最小の高さをウィンドウのサイズと同じに
+        // py-0: padding-top: 0px; padding-bottom: 0px;
+        // px-2: padding-left: 0.5rem;padding-right: 0.5rem;
+        // flex: 横並びに
+        // flex-col: 横並びにしたものを再度垂直に(縦に)する
+        // justify-center: 並べたものを縦方向で中央揃いに
+        // items-center: 並べたものを横方向で中央揃いに
+        <div className="min-h-screen py-0 px-2 flex flex-col justify-center items-center">
             <Head>
                 <title>Create Next App</title>
                 <meta
@@ -21,6 +28,6 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <h1>Hello Next.js</h1>
-        </>
+        </div>
     )
 }
