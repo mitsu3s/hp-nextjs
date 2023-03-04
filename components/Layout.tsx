@@ -6,15 +6,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 // TypeScriptによる型安全性を満たすために使う
+// 今回だとchildrenに<div></div>などのNodeが来るため必要となる
 import { ReactNode } from 'react'
 
 // Layoutを使う時に渡されるpropsの型を定義
-type LayoutProps = {
+interface LayoutProps {
     children: ReactNode
     title: string
 }
 
-export default function Layout({ children, title = 'HP by Next.js' }: LayoutProps) {
+export const Layout = ({ children, title = 'HP by Next.js' }: LayoutProps) => {
     //: LayoutPropsで型を指定
     return (
         // Tailwindcssに関してはチートシート参照
@@ -81,3 +82,5 @@ export default function Layout({ children, title = 'HP by Next.js' }: LayoutProp
         </div>
     )
 }
+
+export default Layout
