@@ -2,7 +2,7 @@ import Layout from '@/components/Layout'
 import Image from 'next/image'
 
 // /contact-pageの内容
-const Contact = () => {
+export default function Contact() {
     return (
         <Layout title="Contact">
             {/* shadow: 影を追加(影の強さなどはハイフンの後ろを変更) */}
@@ -86,4 +86,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+// export default Contact
