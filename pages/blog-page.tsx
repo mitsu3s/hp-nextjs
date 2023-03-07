@@ -4,8 +4,10 @@ import { getAllPostsData } from '@/lib/posts'
 
 interface BlogProps {
     posts: {
+        userId: string
         id: number
         title: string
+        body: string
     }[] // postsを持つ配列と示している
 }
 

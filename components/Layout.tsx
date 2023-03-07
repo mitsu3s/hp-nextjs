@@ -1,3 +1,5 @@
+// 全体のレイアウト(上の紺色のバーと下のVercelのロゴ)
+
 // Next.jsフレームワークでページの<head>を設定するのため
 import Head from 'next/head'
 // Next.jsでクライアントサイドのルーティングを実現するため
