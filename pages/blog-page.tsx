@@ -8,7 +8,7 @@ interface BlogProps {
         id: number
         title: string
         body: string
-    }[] // postsを持つ配列と示している
+    }[] // postsを持つ配列としている
 }
 
 // /blog-pageの内容
